@@ -1,0 +1,62 @@
+AJAX :
+    - 1. ajax是什么:
+        - asynchronous (异步) javaScript and xml
+          能够使用js访问服务器, 异步访问.
+
+        - 局部刷新:
+            - 数据:
+                纯文本 text
+                XML
+                json
+
+    - 2. 同步和异步
+
+    - 3. ajax优缺点
+
+    - 4. ajax 发送异步请求的步骤(4步操作)
+        - 1> 得到XMLHttpRequest对象
+                由于浏览器差异, 得到 xmlHttp 的方式不同
+        - 2> 打开与服务器的连接
+                xmlHttp.open(method,url,是否异步);
+        - 3> 发送请求
+                xmlHttp.send();
+                如果是get 没有数据要发送, 需要填 null.
+        - 4> 监听事件, 得到返回的数据
+                xmlHttp.onreadystatechange
+                xmlHttp对象一共有5种状态
+                * xmlHttp.readystate == 4; 服务器响应结束
+                * xmlHttp.status == 200;   服务器响应的状态码
+                > 得到服务器响应内容
+                    > String   responseTest
+                    > Document   responseXML
+
+
+Json:
+    它是 js 提供的一种数据交换的格式
+
+    语法:
+        {} : 对象
+        > 属性名: 使用双引号
+        > 属性值:
+            * null
+            * 数值
+            * 字符串
+            * 数组[]
+            * 布尔
+            * 对象
+
+
+json-lib 工具类:
+    - 1.作用
+        将JavaBean转为json
+    - 2. 导包
+        lib1 中所有
+    - 3.使用
+        JSONObject
+        > toString
+        > JSONObject map = JSONObject.fromObject(person); 把 JavaBean 转为 JSONObject 对象
+
+        JSONArray
+        > toString
+        > JSONArray jsonArray = JSONArray.fromObject(list); 把装有 JavaBean 的list 转成 JSONArray 对象
+
